@@ -27,7 +27,7 @@ public class MovementController : MonoBehaviour
         Vector2 mouse = Mouse.current.delta.ReadValue();
         _yaw += mouse.x * mouseSensitivity;
         _pitch -= mouse.y * mouseSensitivity;
-        _pitch = Mathf.Clamp(_pitch, -8f, 60f);
+        _pitch = Mathf.Clamp(_pitch, -5f, 60f);
 
         // WASD — body always faces the yaw direction
         transform.rotation = Quaternion.Euler(0f, _yaw, 0f);
